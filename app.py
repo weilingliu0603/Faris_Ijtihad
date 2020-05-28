@@ -13,10 +13,6 @@ def home():
     return flask.render_template("index.html")
 
 
-
-
-
-
 #-----------------------addMember--------------------------------   
 @app.route('/addMember')
 def addMember():
@@ -84,12 +80,6 @@ def memberAdded():
         return flask.render_template('memberAdded.html')
 
 
-
-
-
-
-
-
  #-------------------updateMember--------------------------------   
 @app.route('/updateMember')
 def updateMember():
@@ -141,11 +131,6 @@ def memberUpdated():
         db.close()
 
         return flask.render_template('memberUpdated.html')
-
-
-
-
-
 
 
 
@@ -244,11 +229,6 @@ def invoiceAdded():
 
 
 
-
-
-
-
-
 #-----------------------dailyTransactions---------------------------   
 @app.route('/dailyTransactions')
 def dailyTransactions():
@@ -282,12 +262,6 @@ def viewDailyTransactions():
     return flask.render_template('viewDailyTransactions.html', rows = rows)
 
 
-
-
-
-
-
-
 #------------------------monthlySales---------------------------------   
 @app.route('/monthlySales')
 def monthlySales():
@@ -317,14 +291,6 @@ def viewMonthlySales():
     db.close()
 
     return flask.render_template('viewMonthlySales.html', total = total)
-
-
-
-
-
-
-
-
 
 
 
@@ -361,17 +327,8 @@ def viewMemberTransactions():
     """, (int(mID),))
     rows = cursor.fetchall()
 
-
-
-
     return flask.render_template('viewMemberTransactions.html', rows = rows)
   
 
-
-
-
 if __name__ == '__main__':
-    app.run(port = 5000, debug = True)
-
-
-app.run(debug=True)
+    app.run(debug=True, use_reloader=True)

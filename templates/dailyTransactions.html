@@ -1,0 +1,13 @@
+<html>
+<head><title>JP Salon Administration</title></head>
+<h1><font color="blue">JP Salon Administration</font></h1>
+<h2>Daily Transactions</h2>
+
+<form action = "{{url_for('viewDailyTransactions')}}" method = "POST">
+	Date: <font color="red">{{ dateError }}</font><br>
+	<input type = "date" name = "date">
+	<br><br><br>
+	<input type = "SUBMIT" value = "Submit">
+</form>
+
+</html>

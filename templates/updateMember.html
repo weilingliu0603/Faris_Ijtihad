@@ -1,0 +1,22 @@
+<html>
+<head><title>JP Salon Administration</title></head>
+<h1><font color="blue">JP Salon Administration</font></h1>
+<h2>Update member's information</h2>
+<p><strong>*If unchanged, key in old data</strong></p>
+
+<form action = "{{url_for('memberUpdated')}}" method = "POST">
+	MemberID: <font color="red">{{ idError }}</font><br>
+	<input name = "ID">
+	<br><br>
+
+	New email: <font color="red">{{ emailError }}</font><br><br>
+	<input type = "email" name = "new_email">
+	<br><br>
+
+	New mobile number: <font color="red">{{ mobileError }}</font><br>
+	<input name = "new_mobileNo">
+	<br><br>
+	<input type = "SUBMIT" value = "Submit">
+</form>
+
+</html>

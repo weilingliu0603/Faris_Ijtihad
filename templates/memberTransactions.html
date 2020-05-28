@@ -1,0 +1,13 @@
+<html>
+<head><title>JP Salon Administration</title></head>
+<h1><font color="blue">JP Salon Administration</font></h1>
+<h2>Member's Transactions</h2>
+
+<form action = "{{url_for('viewMemberTransactions')}}" method = "POST">
+	Member ID: <font color="red">{{ idError }}</font><br>
+	<input name = "memberID">
+	<br><br><br>
+	<input type = "SUBMIT" value = "Submit">
+</form>
+
+</html>

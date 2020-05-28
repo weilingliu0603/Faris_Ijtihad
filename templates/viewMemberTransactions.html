@@ -1,0 +1,31 @@
+<html>
+<head><title>JP Salon Administration</title></head>
+<h1><font color="blue">JP Salon Administration</font></h1>
+<h2>Member's Transactions</h2>
+
+<table border = "1">
+	<tr bgcolor = "grey">
+		<td><font color = "white"><div align = "center"><strong>invoiceNo&ensp;</strong></div></td>
+		<td><font color = "white"><div align = "center"><strong>Name&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</strong></div></td>
+		<td><font color = "white"><div align = "center"><strong>memberID&ensp;&ensp;</strong></div></td>
+		<td><font color = "white"><div align = "center"><strong>Date&ensp;&ensp;&ensp;&ensp;</strong></div></td>
+		<td><font color = "white"><div align = "center"><strong>Service&ensp;&ensp;&ensp;&ensp;</strong></div></td>
+		<td><font color = "white"><div align = "center"><strong>Price&ensp;&ensp;&ensp;&ensp;</strong></div></td>
+	</tr>
+	
+	{% for row in rows %}
+	
+	<tr>
+		<td>{{ row['invoiceNo'] }}</td>
+		<td>{{ row['name'] }}</td>
+		<td>{{ row['memberID'] }}</td>
+		<td>{{ row['dateOfTr'] }}</td>
+		<td>{{ row['service'] }}</td>
+		<td>${{ row['price'] }}</td>
+	</tr>
+	{% endfor %}
+	
+</table>
+
+
+</html>

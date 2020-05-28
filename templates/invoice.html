@@ -1,0 +1,61 @@
+<html>
+<head><title>JP Salon Administration</title></head>
+<h1><font color="blue">JP Salon Administration</font></h1>
+<h2>New Invoice</h2>
+
+<form action = "{{url_for('invoiceAdded')}}" method = "POST">
+	Customer's Name: <font color="red">{{ nameError }}</font><br>
+	<input name = "name">
+	<br><br>
+
+	Member ID: <font color="red">{{ idError }}</font><br>
+	<input name = "memberID">
+	<br><br>
+
+	Date:<br>
+	<input type = "date" name = "date">
+	<br><br>
+
+	Service provided: <font color="red">{{ serviceError }}</font><br>
+	<select name = "service1">
+		<option value = "None">None</option>
+		{% for i in service %}
+		<option value = "{{ i[0] }}">{{ i[0] }}</option>
+		{% endfor %}
+	</select>
+	<br><br>
+	<select name = "service2">
+		<option value = "None">None</option>
+		{% for i in service %}
+		<option value = "{{ i[0] }}">{{ i[0] }}</option>
+		{% endfor %}
+	</select>
+	<br><br>
+	<select name = "service3">
+		<option value = "None">None</option>
+		{% for i in service %}
+		<option value = "{{ i[0] }}">{{ i[0] }}</option>
+		{% endfor %}
+	</select>
+	<br><br>
+	<select name = "service4">
+		<option value = "None">None</option>
+		{% for i in service %}
+		<option value = "{{ i[0] }}">{{ i[0] }}</option>
+		{% endfor %}
+	</select>
+	<br><br>
+	<select name = "service5">
+		<option value = "None">None</option>
+		{% for i in service %}
+		<option value = "{{ i[0] }}">{{ i[0] }}</option>
+		{% endfor %}
+	</select>
+
+
+	<br><br><br>
+	<input type = "SUBMIT" value = "Submit">
+</form>
+
+
+</html>
